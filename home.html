@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <style>
+    
     body{
         background-color:  #f2ffeb;
         margin: 0 0 55px 0;
@@ -19,6 +24,7 @@
         display: flex;
         overflow-x: auto;
         background-color: white;
+        position: fixed;
     }
     .img{
         display: flex;
@@ -37,6 +43,60 @@
     .img:hover{
         background-color: #eeeeee;
     }
+    .navdiv{
+        justify-self: center;
+    }
+    .slider{
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+    figure{
+        position: relative;
+        left: 0;
+        width: 400%;
+        animation: 10s slide infinite;
+    }
+    .slide{
+        position: relative;
+        width: 25%;
+        float: left;
+    }
+    .slide img{
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    @keyframes slide{
+        0%{
+            left: 0%;
+        }
+        10%{
+            left: 0%;
+        }
+        20%{
+            left: -100%;
+        }
+        30%{
+            left: -100%;
+        }
+        40%{
+            left: -200%;
+        }
+        50%
+        {
+            left: -200%;
+    }
+    55%{
+        left: -300%;
+    }
+    65%{
+        left: -300%;
+    }
+    66%{
+        left: -300%;
+    }
+
+}
 </style>
 <body>
     <nav class="navbar">
@@ -63,11 +123,37 @@
       </nav>
       <nav class="upnavbar">
         <div class="navdiv">
-
+<ul>
+    <img src="./ysellogo.png" alt="" width="150px">
+</ul>
         </div>
+    
+    </nav>
+    <div class="slider">
+        <figure>
+            <div class="slide">
+        <img height="500" width="400" src="./slide1.jpg" alt="">
+ </div>
+ <div class="slide">
+    <img height="500" width="400" src="./slide2.jpg" alt="">
+</div>
+<div class="slide">
+    <img height="500" width="400" src="./slide3.jpg" alt="">
+</div>
+<div class="slide">
+    <img height="500" width="400" src="./slide4.jpg" alt="">
+</div>
 
-      </nav>
-    <a href="./login.html"><p>Back</p>
-</a>
+        </figure>
+
+    </div>
+    <nav class="navwithdraw">
+        <a href="" class="withdrawimg">
+            <img src="./withdrawicon.png" alt="">
+            <span class="withdrawspan">Withdrawal</span>
+        </a>
+
+
+    </nav>
 </body>
 </html>
