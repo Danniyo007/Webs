@@ -10,7 +10,10 @@
   />
 </head>
 <style>
-    
+    *{
+        margin: 0;
+        padding: 0;
+    }
     body{
         background-color:  #f2ffeb;
         margin: 0 0 55px 0;
@@ -59,12 +62,23 @@
     }
     .slide{
         position: relative;
-        width: 25%;
         float: left;
     }
     .slide img{
         height: auto;
         aspect-ratio: 16/9;
+    }
+    .immg{
+display: flex;
+flex-direction: column;
+align-items: center;
+min-width: 100px;
+    }
+    a{text-decoration: none;}
+    .immgg{
+        justify-self: center;
+        display: flex;
+
     }
     @keyframes slide{
         0%{
@@ -95,6 +109,18 @@
     66%{
         left: -300%;
     }
+    70%{
+        left: -300%;
+    }
+    80%{
+        left: -200%;
+    }
+    90%{
+        left: -200%;
+    }
+    100%{
+        right: 0%;
+    }
 
 }
 </style>
@@ -124,7 +150,7 @@
       <nav class="upnavbar">
         <div class="navdiv">
 <ul>
-    <img src="./ysellogo.png" alt="" width="150px">
+    <img src="./ysellogo.png" alt="" width="100px">
 </ul>
         </div>
     
@@ -145,15 +171,29 @@
 </div>
 
         </figure>
-
-    </div>
-    <nav class="navwithdraw">
-        <a href="" class="withdrawimg">
-            <img src="./withdrawicon.png" alt="">
-            <span class="withdrawspan">Withdrawal</span>
+      <div class="immgg">
+        <a href="#" class="immg">
+            <img src="./withdrawicon.png" alt="" width="40px" 20px>
+            <span>Withdrawal</span>
         </a>
+        <a href="#" class="immg">
+            <img src="./rechargeicon.png" alt="" width="40px" 20px>
+            <span>Recharge</span>
+        </a>
+        <a href="#" class="immg">
+            <img src="./inviteicon.png" alt="" width="40px" 20px>
+            <span>Invite</span>
+        </a>
+        <a href="#" class="immg">
+            <img src="./yselglobalfundicon.png" alt="" width="40px" 20px>
+            <span>YSEL Global Fund</span>
+        </a>
+            
 
-
-    </nav>
+        </div>
+    </div>
+      
+   
+       
 </body>
 </html>
