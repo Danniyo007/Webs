@@ -168,6 +168,33 @@ justify-content: space-between;
     color: white;
     
 }
+.autoshows{
+    animation: text-appear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes text-appear{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.autorotate{
+    animation: AutoRotateAnimation;
+    animation-timeline: view();
+}
+@keyframes AutoRotateAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 </style>
 <body>
     <nav class="navbar">
@@ -179,7 +206,7 @@ justify-content: space-between;
             <img src="./profitnavbaricon.png" alt="" width="30px">
             <span class="bottomnav">Profit</span>
         </a>
-        <a href="#" class="img">
+        <a href="./travel.html" class="img">
             <img src="./lighttravelicon.png" alt="" width="30px">
             <span class="bottomnav">Travel</span>
         </a>
@@ -264,7 +291,7 @@ justify-content: space-between;
         <div style="justify-self: center;">
         <video controls  src="./IMG_6908.mp4" width="100%"></video>
       </div><br>
-      <div>
+      <div class="autoshow">
         <h1 style="font-size: small;">YSEL-Share GREAT COMPANY</h1>
       </div> <br>
       <div style="display: flex;background-color: #ffffff;">
@@ -281,15 +308,15 @@ justify-content: space-between;
     </div>
     <div style="display: flex;justify-content: space-between;align-items: center;margin-top: 19px;">
         <h1 style="font-size: medium;">YSEL Employee Notice</h1>
-        <img src="./hoticonyselemployeenoticepic.png" alt="" width="80px">
+        <img src="./hoticonyselemployeenoticepic.png" alt="" width="80px" class="autorotate">
     </div>
      <div style="display: flex;background-color: #ffffff;height: 70px;margin-top: 20px;">
         <h1 style="font-size: smaller;">YSEL Employee Guidelines <br> <p style="font-weight: lighter;color: gray;">1. Compliance and Conduct employees are expected to adhere to company rules and re...</p></h1>
     <img src="./yselemployeeguidelinespic.jpg" alt="" width="70px">  
-    </div>
-    <div style="display: flex;background-color: #1ab37b;gap: 1rem;align-items: center;">
-        <img style="margin-right: 20px;margin-left: 10px;" src="./mytravelpointspic.png" alt="" width="130px">
+    </div><br>
+    <div style="display: flex;background-color: #1ab37b;gap: 1rem;align-items: center;border-radius: 10px;width: 400px;justify-self: center;height: 70px;">
+        <img style="margin-right: 20px;margin-left: 10px;align-self: center;" src="./mytravelpointspic.png" alt="" width="130px">
         <p style="color: #ffffff;">My Travel Points ><br>Waiting for opening</p>
-    </div>
+    </div><br>
 </body>
 </html>

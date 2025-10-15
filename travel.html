@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+        padding: 0px;
+        margin: 0 0 55px 0;
+    
+    }
+    .navbar{
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        height: 55px;
+        box-shadow: 0 0 3px rgb(0, 0, 0.2);
+        display: flex;
+        overflow-x: auto;
+        background-color: white;
+        position: fixed;
+    }
+    .img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        flex-direction: column;
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+        font-size: small;
+        min-width: 50px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .img:hover{
+        background-color: #eeeeee;
+    }
+    .marquee{
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        align-items: center;
+    }
+    .scroll-box{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+
+    }
+    .marquee-content{
+        display: inline-block;
+        animation: scrollText 16s linear infinite;padding-left: 100%;    }
+    .marquee-content::after{
+        content: attr(data-text);
+        
+    }
+    @keyframes scrollText {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+    .marquee img{
+    flex-shrink: 0;
+        height: 30px;
+        width: 30px;
+        vertical-align: middle;
+        
+        margin-left: 5px;
+    }
+.marquee span{
+    vertical-align: middle;
+
+}
+</style>
+<body>
+      <nav class="navbar">
+        <a href="./home.html" class="img">
+            <img src="./lighthomeicon.png" alt="" width="30px">
+            <span class="bottomnav">Home</span>
+        </a>
+        <a href="./profit.html" class="img">
+            <img src="./profitnavbaricon.png" alt="" width="30px">
+            <span class="bottomnav">Profit</span>
+        </a>
+        <a href="./travel.html" class="img">
+            <img src="./lighttravelicon.png" alt="" width="30px">
+            <span class="bottomnav">Travel</span>
+        </a>
+        <a href="#" class="img">
+            <img src="./teamnavbaricon.png" alt="" width="30px">
+            <span class="bottomnav">Team</span>
+        </a>
+        <a href="#" class="img">
+            <img src="./minenavbaricon.png" alt="" width="30px">
+            <span class="bottomnav">Mine</span>
+        </a>
+    </nav>
+    <div style="display: flex;justify-self: center;">
+        <p style="background-color: #1ab37b;border-radius: 2px;color: #ffffff;height: 35px;width: 140px;align-content: center;text-align: center;">Start Travelling</p>
+        <p style="background-color: #ffffff;border-radius: 2px;height: 35px;width: 140px;align-content: center;text-align: center;">Travel List</p>
+    </div>
+<div class="marquee">
+<img src="./markimg.png" alt="">
+<div class="scroll-box">
+ <div class="marquee-content" data-text="Congratulations to participant *****3754 for inviting A2 and receiving a referral reward of $5000!">
+        
+        <span>Congratulations to participant *****3754 for inviting A2 and receiving a referral reward of $5000! ,</span>
+
+    </div>
+</div>
+   
+</div>
+</body>
+</html>
